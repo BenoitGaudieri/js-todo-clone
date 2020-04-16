@@ -9,7 +9,7 @@ $(document).ready(function () {
     ];
     var todoList = $(".todo");
 
-    // Populating the todo ul with prewritter todoItems arr
+    // Populating the todo ul with prewritten todoItems arr
     for (let i = 0; i < todoItems.length; i++) {
         // Clone template from html
         let elementList = $(".template li").clone();

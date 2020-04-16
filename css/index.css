@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background: linear-gradient(90deg, #69b7eb, #b3dbd3, #ffb476);
+}
+
+.template {
+    display: none;
+}
+
+#app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Input */
+.add-element {
+    width: 100%;
+    height: 45px;
+    line-height: 45;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 0;
+    background: #f1f7f7;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: background 0.4s;
+}
+
+.add-element:hover,
+.add-element:focus {
+    background: #fff;
+}
+
+/* Todo List */
+.todo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -3rem 4px;
+    padding: 1.1rem 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
+}
+
+.todo li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: default;
+}
+
+.todo li:last-child {
+    border-bottom: 0;
+}
+
+.todo li.completed {
+    /* text-decoration: line-through; */
+    opacity: 0.6;
+}
+
+.todo li.completed:before {
+    content: "";
+    position: absolute;
+    top: 38%;
+    left: -10px;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.5);
+    animation: strikeitem 0.5s ease-out 0s forwards;
+}
+
+@keyframes strikeitem {
+    to {
+        width: calc(95%);
+    }
+}
+
+.todo li i {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.4s;
+}
+
+.todo li i:hover {
+    opacity: 1;
+}
